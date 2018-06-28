@@ -48,7 +48,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: Platform.select({
+      ios: 'skyblue',
+      android: 'teal'
+    }),
   },
   welcome: {
     fontSize: 20,
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: 'teal',
+    color: '#333333',
     marginBottom: 5,
   },
 });
